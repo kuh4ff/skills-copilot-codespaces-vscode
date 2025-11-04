@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Bounty AI App 🔒🤖</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔒 Bug Bounty AI App</h1>
+            <p class="subtitle">AI-Powered Vulnerability Scanner & Report Manager</p>
+        </header>
+
+        <main>
+            <!-- Scanner Section -->
+            <section class="scanner-section">
+                <h2>🔍 Vulnerability Scanner</h2>
+                <div class="scanner-form">
+                    <div class="form-group">
+                        <label for="targetType">Scan Type:</label>
+                        <select id="targetType">
+                            <option value="url">URL</option>
+                            <option value="code">Code Snippet</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="targetInput">Target:</label>
+                        <textarea 
+                            id="targetInput" 
+                            rows="6" 
+                            placeholder="Enter URL or paste code here to scan for vulnerabilities..."></textarea>
+                    </div>
+
+                    <button id="scanBtn" class="btn btn-primary">
+                        🔍 Scan for Vulnerabilities
+                    </button>
+                </div>
+
+                <!-- Scan Results -->
+                <div id="scanResults" class="results-container" style="display: none;">
+                    <h3>📊 Scan Results</h3>
+                    <div id="resultsContent"></div>
+                </div>
+            </section>
+
+            <!-- Reports Section -->
+            <section class="reports-section">
+                <h2>📝 Bug Reports</h2>
+                <div class="reports-controls">
+                    <button id="refreshReportsBtn" class="btn btn-secondary">
+                        🔄 Refresh Reports
+                    </button>
+                    <button id="showStatsBtn" class="btn btn-secondary">
+                        📊 Show Statistics
+                    </button>
+                </div>
+                
+                <div id="reportsContainer" class="reports-list">
+                    <p class="no-reports">No reports yet. Start scanning to find vulnerabilities!</p>
+                </div>
+
+                <!-- Statistics Modal -->
+                <div id="statsModal" class="modal" style="display: none;">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>📊 Statistics</h3>
+                        <div id="statsContent"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>⚠️ Educational purposes only. Always obtain proper authorization before testing.</p>
+            <p>Built with ❤️ for ethical bug bounty hunters</p>
+        </footer>
+    </div>
+
+    <script src="/app.js"></script>
+</body>
+</html>
